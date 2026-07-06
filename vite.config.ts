@@ -1058,7 +1058,7 @@ export default defineConfig(({ mode }) => {
     build: {
       // Geospatial bundles (maplibre/deck) are expected to be large even when split.
       // Raise warning threshold to reduce noisy false alarms in CI.
-      chunkSizeWarningLimit: 1200,
+      chunkSizeWarningLimit: 4000,
       // Vite 6 hoists every dynamic chunk's STATIC deps into the entry HTML's
       // modulepreload list to avoid latency on the first dynamic import. For the
       // map stack that defeats the whole point of dynamic-importing MapContainer:
